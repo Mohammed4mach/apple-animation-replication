@@ -1,0 +1,174 @@
+@mixin flex
+{
+    display: flex;
+}
+
+@mixin flex-center
+{
+    @include flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-column
+{
+    @include flex;
+
+    flex-direction: column;
+}
+
+@mixin flex-self-start
+{
+    align-self: flex-start;
+}
+
+@mixin flex-self-end
+{
+    align-self: flex-end;
+}
+
+.flex-self-start
+{
+    @include flex-self-start;
+}
+
+.flex-self-end
+{
+    @include flex-self-end;
+}
+
+.flex
+{
+    @include flex;
+}
+
+.flex-center
+{
+    @include flex-center;
+}
+
+.flex-column
+{
+    @include flex-column;
+}
+
+.block
+{
+    display: block;
+}
+
+.width-full
+{
+    width: 100%;
+}
+
+.height-full
+{
+    height: 100%;
+}
+
+.width-fit-content
+{
+    width: fit-content;
+}
+
+.height-fit-content
+{
+    height: fit-content;
+}
+
+.width-max-content
+{
+    width: max-content;
+}
+
+.height-max-content
+{
+    height: fit-content;
+}
+
+@mixin grid
+{
+    display: grid;
+}
+
+@mixin grid-center
+{
+    @include grid;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-center
+{
+    @include grid-center;
+}
+
+$__directions: 'top', 'right', 'bottom', 'left', 'inline', 'block';
+
+@for $value from 1 through 100
+{
+    @each $direction in $__directions
+    {
+        .margin-#{$value}px
+        {
+            margin: #{$value}px;
+        }
+
+        .margin-#{$direction}-#{$value}px
+        {
+            margin-#{$direction}: #{$value}px;
+        }
+    }
+}
+
+@each $direction in $__directions
+{
+    .margin-#{$direction}-auto
+    {
+        margin-#{$direction}: auto;
+    }
+}
+
+@for $value from 1 through 10
+{
+    @each $direction in $__directions
+    {
+        .border-#{$direction}-#{$value}px
+        {
+            border-#{$direction}: #{$value}px solid #0007;
+        }
+    }
+}
+
+@for $value from 1 through 50
+{
+    @each $direction in $__directions
+    {
+        .padding-#{$direction}-#{$value}px
+        {
+            padding-#{$direction}: #{$value}px;
+        }
+    }
+}
+
+@for $value from 1 through 500
+{
+    .width-#{$value}px
+    {
+        width: #{$value}px
+    }
+
+    .height-#{$value}px
+    {
+        height: #{$value}px
+    }
+}
+
+.cursor-pointer
+{
+    cursor: pointer;
+}
+

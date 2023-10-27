@@ -1,0 +1,36 @@
+// Variables
+@use "variables" as *;
+
+// Framework
+@import "framework";
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    min-height: 100vh;
+	background-color: $bg-color;
+    color: $text-color;
+	line-height: 1.4705882353;
+	letter-spacing: -0.022em;
+
+    font: {
+	    family: $font-family;
+        size: $font-size;
+        weight: 400;
+        style: normal;
+    }
+}
+
+#app
+{
+    width: 90%;
+    margin-inline: auto;
+    flex: 1;
+}
+
