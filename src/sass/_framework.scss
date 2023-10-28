@@ -106,9 +106,68 @@
     @include grid-center;
 }
 
+.absolute-center
+{
+    position:absolute !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin background-as-color
+{
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@for $i from 1 through 12
+{
+    @for $j from 1 through 12
+    {
+        .grid_#{$i}x#{$j}_1fr
+        {
+            @include grid;
+
+            grid-template-rows: repeat(#{$i}, 1fr);
+            grid-template-columns: repeat(#{$j}, 1fr);
+        }
+    }
+}
+
+@for $i from 1 through 10
+{
+    @for $j from 1 through 10
+    {
+        .grid_#{$i}x#{$j}_auto
+        {
+            @include grid;
+
+            grid-template-rows: repeat(#{$i}, auto);
+            grid-template-columns: repeat(#{$j}, auto);
+        }
+    }
+}
+
+@for $value from 1 through 20
+{
+    @for $i from 1 through 10
+    {
+        @for $j from 1 through 10
+        {
+            .grid_#{$i}x#{$j}_#{$value}px
+            {
+                @include grid;
+
+                grid-template-rows: repeat(#{$i}, #{$value});
+                grid-template-columns: repeat(#{$j}, #{$value});
+            }
+        }
+    }
+}
+
 $__directions: 'top', 'right', 'bottom', 'left', 'inline', 'block';
 
-@for $value from 1 through 100
+@for $value from 1 through 200
 {
     @each $direction in $__directions
     {
@@ -143,7 +202,7 @@ $__directions: 'top', 'right', 'bottom', 'left', 'inline', 'block';
     }
 }
 
-@for $value from 1 through 50
+@for $value from 1 through 25
 {
     @each $direction in $__directions
     {

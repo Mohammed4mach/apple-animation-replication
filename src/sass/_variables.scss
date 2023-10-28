@@ -1,8 +1,23 @@
 // Typography
-$font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-$font-size: 17px;
+$font-family: SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+$font-size: 21px;
+$font-weight: 600;
+$line-height: 1.1904761905;
+$letter-spacing: .011em;
+
+// max-width: 734px;
+$font-size-narrow: 15px;
+$line-height-narrow: 1.26667;
+$letter-spacing-narrow: 0em;
+
+// max-width: 1068px;
+$font-size-mid: 17px;
+$line-height-mid: 1.2353641176;
+$letter-spacing-mid: 0em;
 
 // Colors
 $bg-color: #000;
-$text-color: #1d1d1f;
+$text-color: #6e6e73;
+$text-strong: #f5f5f7;
+$text-green: #00ff41;
 
