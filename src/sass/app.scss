@@ -218,8 +218,10 @@ strong
 
     &--masked
     {
-        -webkit-mask-image: url('../../assets/images/audio_airpod_mask__c3ed1snibvo2_large.png');
-        mask-image: url('../../assets/images/audio_airpod_mask__c3ed1snibvo2_large.png');
+        -webkit-mask-image: url('../../assets/images/audio_airpod_mask__c3ed1snibvo2_large.png'),
+            url('../../apple-animation-replication/assets/images/audio_airpod_mask__c3ed1snibvo2_large.png');
+        mask-image: url('../../assets/images/audio_airpod_mask__c3ed1snibvo2_large.png'),
+            url('../../apple-animation-replication/assets/images/audio_airpod_mask__c3ed1snibvo2_large.png');
         -webkit-mask-size: contain;
         mask-size: contain;
         -webkit-mask-repeat: no-repeat;
