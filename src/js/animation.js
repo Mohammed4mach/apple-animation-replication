@@ -29,7 +29,7 @@ const animateOnScroll = function() {
     const scene6Info = new SceneInfo(scene5Info.start, scene5Info.duration);
     const scene7Info = new SceneInfo(scene6Info.start + scene6Info.duration / 2, scene6Info.duration / 2);
     const scene8Info = new SceneInfo(scene7Info.end - 60, 240);
-    const scene9Info = new SceneInfo(scene8Info.start + 20, 35);
+    const scene9Info = new SceneInfo(scene8Info.start + 20, 40);
 
     // Set pin
     const pinSectionScene = new ScrollMagic.Scene({

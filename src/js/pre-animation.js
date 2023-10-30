@@ -69,7 +69,7 @@ const hideContents = function(airpods, video, texts)
  * */
 const scaleUpVideo = function(video)
 {
-    video.style.scale = 1.2;
+    video.classList.add('scale-120');
 }
 
 /**
@@ -85,7 +85,7 @@ const preAnimationStyle = function()
 
     adjustSectionsPositions(airpods, sections, texts);
     hideContents(airpods, particlesVideo, texts);
-    scaleUpVideo(particlesVideo);
+    // scaleUpVideo(particlesVideo);
 };
 
 

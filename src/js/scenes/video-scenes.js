@@ -9,7 +9,7 @@ import ScrollMagic from "scrollmagic";
 * */
 export const setupVideoScene = function(element, offset)
 {
-    const videoScaleScene = new TweenMax.to(element, 0.3, { scale: 1, opacity: 1 })
+    const videoScaleScene = new TweenMax.fromTo(element, 0.3, { scale: 1.2, opacity: 0 }, { scale: 1, opacity: 1 })
 
     return new ScrollMagic.Scene({
         offset: offset,
