@@ -4,22 +4,22 @@ A try to replicate on-scroll animation from [AirPods Pro web page](https://www.a
 
 ## Installation
 
-- [ ] Fork the repo
+- [ ] Clone the repo
 
 ```bash
-    git clone https://github.com/Mohammed4mach/apple-animation-replication
+git clone https://github.com/Mohammed4mach/apple-animation-replication
 ```
 
 - [ ] Install dependencies
 
 ```bash
-    npm install
+npm install
 ```
 
 - [ ] Run the server
 
 ```bash
-    npm run dev
+npm run dev
 ```
 
 ## Used Technologies, Tools, and Libraries
