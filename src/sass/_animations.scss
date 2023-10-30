@@ -1,0 +1,69 @@
+//
+// Aimate usinge CSS   (not used)
+//
+@keyframes scale-down
+{
+    0%
+    {
+        transform: scale(1);
+    }
+
+    100%
+    {
+        transform: scale(0.7);
+    }
+}
+
+@keyframes fade-in
+{
+    0%
+    {
+        opacity: 0;
+    }
+
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out
+{
+    0%
+    {
+        opacity: 1;
+    }
+
+    100%
+    {
+        opacity: 0;
+    }
+}
+
+.scale-down-on-scroll
+{
+    // view-timeline-name: --scale-down-image;
+    // view-timeline-axis: block;
+    // animation: linear scale-down both;
+    // animation-timeline: --scale-down-image;
+    // animation-range: entry 25% cover 50%;
+}
+
+.fade-in-on-scroll
+{
+    // view-timeline-name: --fade-in-image;
+    // view-timeline-axis: block;
+    // animation: linear fade-in both;
+    // animation-timeline: --fade-in-image;
+    // animation-range: entry 25% cover 50%;
+}
+
+.fade-out-on-scroll
+{
+    view-timeline-name: --scale-down-image;
+    view-timeline-axis: block;
+    animation: linear fade-out both;
+    animation-timeline: --scale-down-image;
+    animation-range: cover 50% exit 50%;
+}
+

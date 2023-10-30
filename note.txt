@@ -1,0 +1,13 @@
+scroll-start: 3421
+scroll-end: 4421
+
+first-section-end: 3920
+second-section-end: 4181
+
+first-text: 3440 => 3680
+second-text: 3680 => 3920
+third-text: 3920 => 4200
+
+
+
+

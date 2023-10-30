@@ -202,7 +202,7 @@ $__directions: 'top', 'right', 'bottom', 'left', 'inline', 'block';
     }
 }
 
-@for $value from 1 through 25
+@for $value from 1 through 60
 {
     @each $direction in $__directions
     {
@@ -224,6 +224,79 @@ $__directions: 'top', 'right', 'bottom', 'left', 'inline', 'block';
     {
         height: #{$value}px
     }
+}
+
+@for $value from -250 through 250
+{
+    .translateY-#{$value}px
+    {
+        translate: 0 #{$value}px;
+    }
+
+    .translateX-#{$value}px
+    {
+        translate: #{$value}px 0;
+    }
+
+    .transform-translateY-#{$value}px
+    {
+        transform: translateY(#{$value}px);
+    }
+
+    .transform-translateX-#{$value}px
+    {
+        transform: translateX(#{$value}px);
+    }
+}
+
+$__directions: 'top', 'right', 'bottom', 'left';
+
+@for $value from -200 through 200
+{
+    @each $direction in $__directions
+    {
+        .position-#{$direction}-#{$value}px
+        {
+            #{$direction}: #{$value}px;
+        }
+    }
+}
+
+$__position_values: 'fixed', 'absolute', 'sticky', 'static', 'relative';
+
+@each $value in $__position_values
+{
+    .position-#{$value}
+    {
+        position: #{$value} !important;
+    }
+}
+
+$i : 0;
+@while $i <= 1 {
+    .opacity-#{round($i*100)} {
+        opacity: $i;
+    }
+
+    $i : $i + 0.1;
+}
+
+@for $value from 8 through 40
+{
+    .font-size-#{$value}px
+    {
+        font-size: #{$value}px;
+    }
+}
+
+.font-size-large
+{
+    font-size: large;
+}
+
+.font-size-larger
+{
+    font-size: larger;
 }
 
 .cursor-pointer

@@ -4,6 +4,9 @@
 // Framework
 @import "framework";
 
+// Animations
+@import "animations";
+
 *
 {
     padding: 0;
@@ -41,6 +44,11 @@ body
     }
 }
 
+a
+{
+    text-decoration: none;
+}
+
 strong
 {
     color: $text-strong;
@@ -52,18 +60,29 @@ strong
     }
 }
 
+.color-green
+{
+    color: $text-green;
+}
+
 .features
 {
-    min-height: 300vh;
+    margin-top: 105px;
+    min-height: 760px;
+
+    @media (max-width: 734px)
+    {
+        margin-top: 70px;
+    }
 }
 
 .feature
 {
     width: 980px;
+    height: 643px;
     min-height: 522px;
     margin-inline: auto;
     position: relative;
-    overflow: hidden;
 
     @media (max-width: 1068px)
     {
@@ -104,6 +123,7 @@ strong
     {
         width: 100%;
         margin-inline: 0;
+        overflow: hidden;
     }
 }
 
@@ -180,17 +200,20 @@ strong
 
 .feature__img-airpod
 {
-    width: 35.552%;
-    max-width: 368px;
-    max-height: 522px;
-    min-width: 227px;
-    min-height: 322px;
+    width: 368px;
+    height: 522px;
     position: relative;
 
     @media (min-width: 734px) and (max-width: 1068px)
     {
         width: 289px;
         height: 410px;
+    }
+
+    @media (max-width: 734px)
+    {
+        width: 227px;
+        height: 322px;
     }
 
     &--masked
@@ -206,6 +229,21 @@ strong
     &--2left
     {
         left: -34px;
+
+        @media (max-width: 1068px)
+        {
+            left: -26px;
+        }
+
+        @media (max-width: 734px)
+        {
+            left: -24px;
+        }
+    }
+
+    &--scaled-down
+    {
+        scale: 0.9344;
     }
 }
 
